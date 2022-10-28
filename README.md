@@ -1,3 +1,5 @@
+# Instant Messaging App (Client)
+
 #### Requirements
 
 * Generate your [Google Oauth Credentials](https://console.cloud.google.com/apis/credentials)
@@ -15,3 +17,7 @@ GOOGLE_CLIENT_ID=<CLIENT_ID>
 
 GOOGLE_CLIENT_SECRET=<CLIENT_SECRET>
 ```
+
+Generate a Base64 string for the `NEXTAUTH_SECRET` environment variable: `openssl rand -base64 32`
+
+Generate Prisma Schema: `npx prisma generate`
