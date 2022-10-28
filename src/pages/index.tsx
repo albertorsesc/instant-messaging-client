@@ -6,12 +6,21 @@ import Chat from "../components/Chat/Chat";
 
 const Home: NextPage = () => {
 
-  const { data } = useSession();
+  const { data: session } = useSession();
+
+  const reloadSession = () => {
+
+  }
 
   return (
     <Box>
       {
-        data?.user?.username ? <Chat /> : <Auth />
+        session?.user?.username ?
+          <Chat /> :
+          <Auth
+            session={session}
+            reloadSession={reloadSession}
+          />
       }
     </Box>
   );
